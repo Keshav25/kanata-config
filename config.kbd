@@ -15,11 +15,11 @@
 	)
 
 (defalias
-	s (tap-hold 1000 400 s lalt)
-  r (tap-hold 1000 400 r lctl)
-  t (tap-hold 1000 400 t lsft)
-  n (tap-hold 1000 400 n rsft)
-  e (tap-hold 1000 400 e rctl)
-  a (tap-hold 1000 400 a lalt)
-  spc (tap-hold 1000 400 spc lctrl)
+	s (tap-hold 900 400 s lalt)
+  r (tap-hold 900 400 r lctl)
+  t (tap-hold 900 400 t lsft)
+  n (tap-hold 900 400 n rsft)
+  e (tap-hold 900 400 e rctl)
+  a (tap-hold 900 400 a lalt)
+  spc (tap-hold 900 400 spc lctrl)
   )
