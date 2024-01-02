@@ -15,7 +15,7 @@
 	)
 
 (defalias
-	s (tap-hold 900 400 s lalt)
+  s (tap-hold 900 400 s lalt)
   r (tap-hold 900 400 r lctl)
   t (tap-hold 900 400 t lsft)
   n (tap-hold 900 400 n rsft)
