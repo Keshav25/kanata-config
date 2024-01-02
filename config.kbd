@@ -9,7 +9,7 @@
 (deflayer isrt
 	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
 	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-	caps i    @s   @r   @t   g    p    @n   @e   @a   o    ;    ret
+	@ext i    @s   @r   @t   g    p    @n   @e   @a   o    ;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet lalt           @spc            ralt rctl
 	)
@@ -21,5 +21,15 @@
   n (tap-hold 900 400 n rsft)
   e (tap-hold 900 400 e rctl)
   a (tap-hold 900 400 a lalt)
-  spc (tap-hold 900 400 spc lctrl)
+  spc spc
+  ext (layer-while-held extend)
+;; spc (tap-hold 900 400 spc lctrl)
   )
+
+(deflayer extend
+	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
+	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
+	lsft q    v    w    d    j    b    h    /    .    x    rsft
+	lctl lmet lalt           @spc            ralt rctl
+   )
