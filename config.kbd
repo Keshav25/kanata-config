@@ -23,13 +23,13 @@
   a (tap-hold 900 400 a lalt)
   spc spc
   ext (layer-while-held extend)
-;; spc (tap-hold 900 400 spc lctrl)
+  ;; spc (tap-hold 900 400 spc lctrl)
   )
 
 (deflayer extend
 	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
-	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	tab  y    c    l    m    k    z    f    tab    ,    '    [    ]    \
 	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet lalt           @spc            ralt rctl
-   )
+	)
