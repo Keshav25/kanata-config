@@ -6,30 +6,33 @@
 	lctl lmet lalt           spc            ralt rctl
 	)
 
-(deflayer isrt
-	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
-	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-	@ext i    @s   @r   @t   g    p    @n   @e   @a   o    ;    ret
-	lsft q    v    w    d    j    b    h    /    .    x    rsft
-	lctl lmet lalt           @spc            ralt rctl
-	)
-
 (defalias
+  i (tap-hold 900 400 i (layer-while-held extend))
   s (tap-hold 900 400 s lalt)
   r (tap-hold 900 400 r lctl)
   t (tap-hold 900 400 t lsft)
   n (tap-hold 900 400 n rsft)
   e (tap-hold 900 400 e rctl)
   a (tap-hold 900 400 a lalt)
+  o (tap-hold 900 400 o (layer-while-held extend))
   spc spc
   ext (layer-while-held extend)
   ;; spc (tap-hold 900 400 spc lctrl)
   )
 
+(deflayer isrt
+	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
+	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	@ext @i    @s   @r   @t   g    p    @n   @e   @a   o    ;    ret
+	lsft q    v    w    d    j    b    h    /    .    x    rsft
+	lctl lmet lalt           @spc            ralt rctl
+	)
+
 (deflayer extend
 	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
-	tab  y    c    l    m    k    z    f    tab    ,    '    [    ]    \
+	tab  y    c    l    m    k    z    f    tab    spc    '    [    ]    \
 	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet lalt           @spc            ralt rctl
 	)
+
