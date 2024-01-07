@@ -17,6 +17,7 @@
   o (tap-hold 900 400 o (layer-while-held extend))
   spc spc
   ext (layer-while-held extend)
+  c (layer-switch qwerty)
   ;; spc (tap-hold 900 400 spc lctrl)
   )
 
@@ -30,9 +31,24 @@
 
 (deflayer extend
 	grv  1    2    3    4    5    6    7    8    9    0    -    +    bspc
-	tab  y    c    l    m    k    z    f    tab    spc    '    [    ]    \
+	tab  y    @c    l    m    k    z    f    tab    spc    '    [    ]    \
 	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet lalt           @spc            ralt rctl
+	)
+
+(defalias
+  j (tap-hold 900 400 j rsft)
+  k (tap-hold 900 400 k rctrl)
+  l (tap-hold 900 400 l ralt)
+  isrt (layer-switch isrt))
+ 
+
+(deflayer qwerty
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+	@isrt a    s    d    f    g    h    @j   @k   @l   ;    '    ret
+	lsft z    x    c    v    b    n    m    ,    .    /    rsft
+	lctl lmet lalt           spc            ralt rctl
 	)
 
