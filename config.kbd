@@ -7,14 +7,14 @@
 	)
 
 (defalias
-  i (tap-hold 900 400 i (layer-while-held extend))
-  s (tap-hold 900 400 s lalt)
-  r (tap-hold 900 400 r lctl)
-  t (tap-hold 900 400 t lsft)
-  n (tap-hold 900 400 n rsft)
-  e (tap-hold 900 400 e rctl)
-  a (tap-hold 900 400 a lalt)
-  o (tap-hold 900 400 o (layer-while-held extend))
+  i (tap-hold 900 200 i (layer-while-held extend))
+  s (tap-hold 900 200 s lalt)
+  r (tap-hold 900 200 r lctl)
+  t (tap-hold 900 200 t lsft)
+  n (tap-hold 900 200 n rsft)
+  e (tap-hold 900 200 e rctl)
+  a (tap-hold 900 200 a lalt)
+  o (tap-hold 900 200 o (layer-while-held extend))
   spc spc
   ext (layer-while-held extend)
   c (layer-switch qwerty)
