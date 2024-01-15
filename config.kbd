@@ -16,15 +16,16 @@
   a (tap-hold 900 200 a lalt)
   o (tap-hold 900 200 o (layer-while-held extend))
   spc spc
-  ext (layer-while-held extend)
+  sym (layer-while-held symbols)
   c (layer-switch qwerty)
+  ; (layer-while-held symbols)
   ;; spc (tap-hold 900 400 spc lctrl)
   )
 
 (deflayer isrt
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-	@ext @i    @s   @r   @t   g    p    @n   @e   @a  @o    ;    ret
+	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet lalt           spc            ralt rctl
 	)
@@ -52,3 +53,10 @@
 	lctl lmet lalt           spc            ralt rctl
 	)
 
+(deflayer symbols
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	@sym =    +    -    S-8  /    S-5  S-9  S-[    [  \    ;    ret
+	lsft q    v    w    d    j    b    S-0  S-]    ]   S-\    rsft
+	lctl lmet lalt           spc            ralt rctl
+	)
