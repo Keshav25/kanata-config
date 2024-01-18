@@ -16,10 +16,8 @@
   a (tap-hold 900 300 a lalt)
   o (tap-hold 900 300 o (layer-while-held extend))
   ; (tap-hold 900 300 ; (layer-while-held symbols))
-  spc spc
   sym (layer-while-held symbols)
   c (layer-switch qwerty)
-  ;; spc (tap-hold 900 400 spc lctrl)
   )
 
 (deflayer isrt
