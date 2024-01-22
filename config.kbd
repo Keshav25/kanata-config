@@ -25,7 +25,7 @@
 	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
 	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
-	lctl lmet spc           spc            spc rctl
+	lctl lmet rpt           spc            spc rctl
 	)
 
 (deflayer extend
