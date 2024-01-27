@@ -18,11 +18,12 @@
   ; (tap-hold 900 300 ; (layer-while-held symbols))
   sym (layer-while-held symbols)
   c (layer-switch qwerty)
+  arrow (tap-hold 900 300 c (layer-while-held arrow))
   )
 
 (deflayer isrt
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
 	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
 	lsft q    v    w    d    j    b    h    /    .    x    rsft
 	lctl lmet rpt           spc            spc rctl
@@ -42,6 +43,13 @@
   l (tap-hold 900 400 l ralt)
   isrt (layer-switch isrt))
  
+(deflayer arrow
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+	@sym @i    @s   @r   @t   g    left    down   up  rght  C-x   @;    ret
+	lsft q    v    w    d    j    b    h    /    .    x    rsft
+	lctl lmet rpt           spc            spc rctl
+	)
 
 (deflayer qwerty
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
