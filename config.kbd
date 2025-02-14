@@ -7,7 +7,7 @@
 	)
 
 (defalias
-  i (tap-hold 900 300 i (layer-while-held extend))
+	i (tap-hold 900 300 i (layer-while-held extend))
   s (tap-hold 900 300 s lalt)
   r (tap-hold 900 300 r lctl)
   t (tap-hold 900 300 t lsft)
@@ -15,17 +15,18 @@
   e (tap-hold 900 300 e rctl)
   a (tap-hold 900 300 a lalt)
   o (tap-hold 900 300 o (layer-while-held extend))
-  ; (tap-hold 900 300 ; (layer-while-held symbols))
+										; (tap-hold 900 300 ; (layer-while-held symbols))
   sym (layer-while-held symbols)
   c (layer-switch qwerty)
   arrow (tap-hold 900 300 c (layer-while-held arrow))
+  d (tap-hold 900 300 d (layer-while-held numpad))
   )
 
 (deflayer isrt
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
 	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
-	lsft q    v    w    d    j    b    h    /    .    x    rsft
+	lsft q    v    w    @d    j    b    h    /    .    x    rsft
 	lctl lmet rpt           spc            spc rctl
 	)
 
@@ -38,11 +39,11 @@
 	)
 
 (defalias
-  j (tap-hold 900 400 j rsft)
+	j (tap-hold 900 400 j rsft)
   k (tap-hold 900 400 k rctrl)
   l (tap-hold 900 400 l ralt)
   isrt (layer-switch isrt))
- 
+
 (deflayer arrow
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
@@ -66,3 +67,12 @@
 	lsft q    v    w    d    j    b    S-0  S-]    ]   S-\    rsft
 	lctl lmet lalt           spc            ralt rctl
 	)
+
+(deflayer numpad
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  y    @arrow    l    m  k    z 7   8  9  ,  ,    ]    \
+	@sym @i    @s   @r   @t   g    p   4   5  6  0 .    ret
+	lsft q    v    w    @d    j    b   1   2  3  .  rsft
+	lctl lmet rpt           spc            spc rctl
+	)
+
