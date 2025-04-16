@@ -32,6 +32,22 @@
 	lctl lmet rpt           spc            spc rctl
 	)
 
+(deflayer isrt-left-mods
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
+	@sym @i    @s   @r   @t   g    p    n   e   a  o  @;    ret
+	lsft q    v    w    @d    j    b    h    /    .    x    rsft
+	lctl lmet rpt           spc            spc rctl
+	)
+
+(deflayer isrt-right-mods
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
+	@sym @i    s   r   t   g    p    @n   @e   @a  @o   @;    ret
+	lsft q    v    w    @d    j    b    h    /    .    x    rsft
+	lctl lmet rpt           spc            spc rctl
+	)
+
 (deflayer extend
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  y    @c   up   down k    z    f    tab    spc    '    [    ]    \
