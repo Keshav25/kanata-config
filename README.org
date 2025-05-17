@@ -68,8 +68,9 @@ isrt layout with homerow modifiers
   	j (tap-hold 900 400 j rsft)
     k (tap-hold 900 400 k rctrl)
     l (tap-hold 900 400 l ralt)
-    isrt (layer-switch isrt))
     phpdot (macro - S-.)
+    isrt (layer-switch isrt)
+  paren (fork S-9 S-0 (lsft)))
 
   (deflayer arrow
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
