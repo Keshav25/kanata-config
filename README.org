@@ -91,8 +91,8 @@ isrt layout with homerow modifiers
   (deflayer symbols
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-  	@sym =    +    -    S-8  /    S-5  S-9  S-[    [  \    ;    ret
-  	lsft q    v    w    d    j    b    S-0  S-]    ]   S-\    rsft
+  	@sym =    +    -    S-8  /    S-5  @paren  S-[    [  \    ;    ret
+  	lsft q    v    w    d    j    b    S-0  S-]    @phpdot   S-\    rsft
   	lctl lmet lalt           spc            ralt rctl
   	)
 
