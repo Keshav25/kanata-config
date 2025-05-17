@@ -29,14 +29,15 @@ isrt layout with homerow modifiers
     c (layer-switch qwerty)
     arrow (tap-hold 900 300 c (layer-while-held arrow))
     d (tap-hold 900 300 d (layer-while-held numpad))
+    rpt (tap-hold 900 300 rpt (layer-while-held numpad))
     )
 
   (deflayer isrt
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
   	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
-  	lsft q    v    w    @d    j    b    h    /    .    x    rsft
-  	lctl lmet rpt           spc            spc rctl
+  	lmet q    v    w    @d    j    b    h    /    .    x    rmet
+  	lctl lmet @rpt           spc            spc rctl
   	)
 
   ;; (deflayer isrt-left-mods
