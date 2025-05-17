@@ -1,4 +1,12 @@
-(defcfg process-unmapped-keys yes)
+;; #+TITLE: Kanata Configuration
+;; #+PROPERTY: header-args :tangle config.kbd :comments both
+;; #+OPTIONS: toc:2 num:nil
+
+;; isrt layout with homerow modifiers
+
+;; [[file:README.org::+begin_src lisp][No heading:1]]
+(defcfg process-unmapped-keys yes
+  concurrent-tap-hold yes)
 
 (defsrc
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -9,16 +17,16 @@
 	)
 
 (defalias
-	i (tap-hold 900 300 i (layer-while-held extend))
-  s (tap-hold 900 300 s lalt)
-  r (tap-hold 900 300 r lctl)
-  t (tap-hold 900 300 t lsft)
-  n (tap-hold 900 300 n rsft)
-  e (tap-hold 900 300 e rctl)
-  a (tap-hold 900 300 a lalt)
-  o (tap-hold 900 300 o (layer-while-held extend))
-										; (tap-hold 900 300 ; (layer-while-held symbols))
-  sym (layer-while-held symbols)
+	i (tap-hold  900  150 i (layer-while-held extend))  
+  s (tap-hold  300  150 s lalt)
+  r (tap-hold  300  150 r lctl)
+  t (tap-hold  300  150 t lsft)
+  n (fork (tap-hold  300  150 n rsft) n (lctl))
+  e (tap-hold  300  150 e rctl)
+  a (tap-hold  300  150 a lalt)
+  o (tap-hold  300  150 o (layer-while-held extend))
+										; (tap-hold  300  150 ; (layer-while-held symbols))
+  sym (tap-hold  300  150 (caps-word-toggle 2000) (layer-while-held symbols))
   c (layer-switch qwerty)
   arrow (tap-hold 900 300 c (layer-while-held arrow))
   d (tap-hold 900 300 d (layer-while-held numpad))
@@ -32,21 +40,21 @@
 	lctl lmet rpt           spc            spc rctl
 	)
 
-(deflayer isrt-left-mods
-	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
-	@sym @i    @s   @r   @t   g    p    n   e   a  o  @;    ret
-	lsft q    v    w    @d    j    b    h    /    .    x    rsft
-	lctl lmet rpt           spc            spc rctl
-	)
+;; (deflayer isrt-left-mods
+;; 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;; 	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
+;; 	@sym @i    @s   @r   @t   g    p    n   e   a  o  @;    ret
+;; 	lsft q    v    w    @d    j    b    h    /    .    x    rsft
+;; 	lctl lmet rpt           spc            spc rctl
+;; 	)
 
-(deflayer isrt-right-mods
-	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
-	@sym @i    s   r   t   g    p    @n   @e   @a  @o   @;    ret
-	lsft q    v    w    @d    j    b    h    /    .    x    rsft
-	lctl lmet rpt           spc            spc rctl
-	)
+;; (deflayer isrt-right-mods
+;; 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;; 	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
+;; 	@sym @i    s   r   t   g    p    @n   @e   @a  @o   @;    ret
+;; 	lsft q    v    w    @d    j    b    h    /    .    x    rsft
+;; 	lctl lmet rpt           spc            spc rctl
+;; 	)
 
 (deflayer extend
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -88,9 +96,9 @@
 
 (deflayer numpad
 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-	tab  y    @arrow    l    m  k    z 7   8  9  ,  ,    ]    \
+	tab  y    @arrow    l    m  k    z 7   8  9  ,  -    ]    \
 	@sym @i    @s   @r   @t   g    p   4   5  6  0 .    ret
-	lsft q    v    w    @d    j    b   1   2  3  .  rsft
+	lsft q    v    w    d    j    b   1   2  3  .  rsft
 	lctl lmet rpt           spc            spc rctl
 	)
-
+;; No heading:1 ends here
