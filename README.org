@@ -30,7 +30,17 @@ isrt layout with homerow modifiers
     arrow (tap-hold 900 300 c (layer-while-held arrow))
     d (tap-hold 900 300 d (layer-while-held numpad))
     rpt (tap-hold 900 300 rpt (layer-while-held numpad))
-    )
+    0 (tap-hold 300 150 0 S-0)
+  1 (tap-hold 300 150 1 S-1)
+  2 (tap-hold 300 150 2 S-2)
+  3 (tap-hold 300 150 3 S-3)
+  4 (tap-hold 300 150 4 S-4)
+  5 (tap-hold 300 150 5 S-5)
+  6 (tap-hold 300 150 6 S-6)
+  7 (tap-hold 300 150 7 S-7)
+  8 (tap-hold 300 150 8 S-8)
+  9 (tap-hold 300 150 9 S-9)
+    ) 
 
   (deflayer isrt
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -98,9 +108,9 @@ isrt layout with homerow modifiers
 
   (deflayer numpad
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    @arrow    l    m  k    z 7   8  9  ,  -    ]    \
-  	@sym @i    @s   @r   @t   g    p   4   5  6  0 .    ret
-  	lsft q    v    w    d    j    b   1   2  3  .  rsft
+  	tab  y    @arrow    l    m  k    z @7   @8  @9  ,  -    ]    \
+  	@sym @i    @s   @r   @t   g    p   @4   @5  @6  @0 .    ret
+  	lsft q    v    w    d    j    b   @1   @2  @3  .  rsft
   	lctl lmet rpt           spc            spc rctl
   	)
 
