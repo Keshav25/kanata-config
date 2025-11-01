@@ -40,6 +40,7 @@ isrt layout with homerow modifiers
   7 (tap-hold 300 150 7 S-7)
   8 (tap-hold 300 150 8 S-8)
   9 (tap-hold 300 150 9 S-9)
+  msd (movemouse-down 1 1)
     ) 
 
   (deflayer isrt
@@ -75,9 +76,10 @@ isrt layout with homerow modifiers
   	)
 
   (defalias
-  	j (tap-hold 900 400 j rsft)
-    k (tap-hold 900 400 k rctrl)
-    l (tap-hold 900 400 l ralt)
+  	j (tap-hold 900 400 j (movemouse-down 1 1))
+    k (tap-hold 900 400 k (movemouse-up 1 1))
+    l (tap-hold 900 400 l (movemouse-right 1 1))
+    h (tap-hold 900 400 h (movemouse-left 1 1))
     phpdot (macro - S-.)
     isrt (layer-switch isrt)
   paren (fork S-9 S-0 (lsft)))
@@ -92,10 +94,10 @@ isrt layout with homerow modifiers
 
   (deflayer qwerty
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  	@isrt a    s    d    f    g    h    @j   @k   @l   ;    '    ret
-  	lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  	lctl lmet lalt           spc            ralt rctl
+  	tab \ q    w    e    r    t    y    u    i    o    p    [    ] 
+  	@isrt ret a    s    d    f    g    @h    @j   @k   @l   ;    ' 
+  	lsft rsft z    x    c    v    b    n    m    ,    .    /
+  	@msd lmet lalt           spc            ralt rctl
   	)
 
   (deflayer symbols
