@@ -82,6 +82,8 @@ isrt layout with homerow modifiers
     h (tap-hold 900 400 h (movemouse-left 1 1))
     ralt (tap-hold 900 400 mrgt ralt)
     rctl (tap-hold 900 400 mlft rctl)
+    ralt (tap-hold 200 200 mlft ralt)
+    rctl (tap-hold 200 200 mrgt rctl)
     phpdot (macro - S-.)
     isrt (layer-switch isrt)
     paren (fork S-9 S-0 (lsft)))
