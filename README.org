@@ -77,7 +77,7 @@ isrt layout with homerow modifiers
 
   (defalias
     j (tap-hold 900 400 j (movemouse-down 1 1))
-    i (tap-hold 900 400 i (movemouse-up 1 1))
+    u (tap-hold 900 400 u (movemouse-up 1 1))
     k (tap-hold 900 400 k (movemouse-right 1 1))
     h (tap-hold 900 400 h (movemouse-left 1 1))
     ralt (tap-hold 900 400 mrgt ralt)
@@ -96,7 +96,7 @@ isrt layout with homerow modifiers
 
   (deflayer qwerty
   	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab \ q    w    e    r    t    y    u    @i    o    p    [    ] 
+  	tab \ q    w    e    r    t    y    @u    i   o    p    [    ] 
   	@isrt ret a    s    d    f    g    @h    @j   @k   l   ;    ' 
   	lsft rsft z    x    c    v    b    n    m    ,    .    /
   	@msd lmet lalt           spc            @ralt @rctl
