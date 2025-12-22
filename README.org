@@ -76,12 +76,10 @@ isrt layout with homerow modifiers
   	)
 
   (defalias
-    j (tap-hold 900 400 j (movemouse-down 1 1))
-    u (tap-hold 900 400 u (movemouse-up 1 1))
-    k (tap-hold 900 400 k (movemouse-right 1 1))
-    h (tap-hold 900 400 h (movemouse-left 1 1))
-    ralt (tap-hold 900 400 mrgt ralt)
-    rctl (tap-hold 900 400 mlft rctl)
+    j (tap-hold 200 200 j (movemouse-down 1 1))
+    u (tap-hold 200 200 u (movemouse-up 1 1))
+    k (tap-hold 200 200 k (movemouse-right 1 1))
+    h (tap-hold 200 200 h (movemouse-left 1 1))
     ralt (tap-hold 200 200 mlft ralt)
     rctl (tap-hold 200 200 mrgt rctl)
     phpdot (macro - S-.)
