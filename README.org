@@ -8,15 +8,15 @@ isrt layout with homerow modifiers
     concurrent-tap-hold yes)
 
   (defsrc
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  	caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  	lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  	lctl lmet lalt           spc            ralt rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+    	caps a    s    d    f    g    h    j    k    l    ;    '    ret
+    	lsft z    x    c    v    b    n    m    ,    .    /    rsft
+    	lctl lmet lalt           spc            ralt rctl
+    	)
 
   (defalias
-  	i (tap-hold  900  150 i (layer-while-held extend))  
+    	i (tap-hold  900  150 i (layer-while-held extend))  
     s (tap-hold  300  150 s lalt)
     r (tap-hold  300  150 r lctl)
     t (tap-hold  300  150 t lsft)
@@ -24,32 +24,32 @@ isrt layout with homerow modifiers
     e (tap-hold  300  150 e rctl)
     a (tap-hold  300  150 a lalt)
     o (tap-hold  300  150 o (layer-while-held extend))
-  										; (tap-hold  300  150 ; (layer-while-held symbols))
+    										; (tap-hold  300  150 ; (layer-while-held symbols))
     sym (tap-hold  300  150 (caps-word-toggle 2000) (layer-while-held symbols))
     c (layer-switch gaming)
     arrow (tap-hold 900 300 c (layer-while-held arrow))
     d (tap-hold 900 300 d (layer-while-held numpad))
     rpt (tap-hold 900 300 rpt (layer-while-held numpad))
     0 (tap-hold 300 150 0 S-0)
-  1 (tap-hold 300 150 1 S-1)
-  2 (tap-hold 300 150 2 S-2)
-  3 (tap-hold 300 150 3 S-3)
-  4 (tap-hold 300 150 4 S-4)
-  5 (tap-hold 300 150 5 S-5)
-  6 (tap-hold 300 150 6 S-6)
-  7 (tap-hold 300 150 7 S-7)
-  8 (tap-hold 300 150 8 S-8)
-  9 (tap-hold 300 150 9 S-9)
-  msd (movemouse-down 1 1)
+    1 (tap-hold 300 150 1 S-1)
+    2 (tap-hold 300 150 2 S-2)
+    3 (tap-hold 300 150 3 S-3)
+    4 (tap-hold 300 150 4 S-4)
+    5 (tap-hold 300 150 5 S-5)
+    6 (tap-hold 300 150 6 S-6)
+    7 (tap-hold 300 150 7 S-7)
+    8 (tap-hold 300 150 8 S-8)
+    9 (tap-hold 300 150 9 S-9)
+    msd (movemouse-down 1 1)
     ) 
 
   (deflayer isrt
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
-  	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
-  	lmet q    v    w    @d    j    b    h    /    .    x    rmet
-  	lctl lmet @rpt           spc            spc rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  y    @arrow    l    m    k    z    f    u    ,    '    [    ]    \
+    	@sym @i    @s   @r   @t   g    p    @n   @e   @a  @o   @;    ret
+    	lmet q    v    w    @d    j    b    h    /    .    x    rmet
+    	lctl lmet @rpt           spc            spc rctl
+    	)
 
   ;; (deflayer isrt-left-mods
   ;; 	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -68,15 +68,15 @@ isrt layout with homerow modifiers
   ;; 	)
 
   (deflayer extend
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    @c   up   down k    z    f    tab    spc    '    [    ]    \
-  	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
-  	lsft q    v    w    d    j    b    h    /    .    x    rsft
-  	lctl lmet lalt           spc            ralt rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  y    @c   up   down k    z    f    tab    spc    '    [    ]    \
+    	caps i    @s   @r   @t   g    p    ret   esc   bspc   o    ;    ret
+    	lsft q    v    w    d    j    b    h    /    .    x    rsft
+    	lctl lmet lalt           spc            ralt rctl
+    	)
 
   (defalias
-    j (tap-hold 200 200 j (movemouse-down 1 1))
+      j (tap-hold 200 200 j (movemouse-down 1 1))
     u (tap-hold 200 200 u (movemouse-up 1 1))
     k (tap-hold 200 200 k (movemouse-right 1 1))
     h (tap-hold 200 200 h (movemouse-left 1 1))
@@ -87,35 +87,42 @@ isrt layout with homerow modifiers
     paren (fork S-9 S-0 (lsft)))
 
   (deflayer arrow
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-  	@sym @i    @s   @r   @t   g    left    down   up  right  C-x   @;    ret
-  	lsft q    v    w    d    j    b    h    /    .    x    rsft
-  	lctl lmet rpt           spc            spc rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+    	@sym @i    @s   @r   @t   g    left    down   up  right  C-x   @;    ret
+    	lsft q    v    w    d    j    b    h    /    .    x    rsft
+    	lctl lmet rpt           spc            spc rctl
+    	)
 
   (deflayer gaming
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab \ q    w    e    r    t    y    @u    i   o    p    [    ] 
-  	@isrt ret a    s    d    f    g    @h    @j   @k   l   ;    ' 
-  	lsft rsft z    x    c    v    b    n    m    ,    .    /
-  	@msd lmet lalt           spc            @ralt @rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab \ q    w    e    r    t    y    @u    i   o    p    [    ] 
+    	@isrt ret a    s    d    f    g    @h    @j   @k   l   ;    ' 
+    	lsft rsft z    x    c    v    b    n    m    ,    .    /
+    	@msd lmet lalt           spc            @ralt @rctl
+    	)
 
   (deflayer symbols
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
-  	@sym =    +    -    S-8  /    S-5  @paren  S-[    [  \    ;    ret
-  	lsft q    v    w    d    j    b    S-0  S-]    @phpdot   S-\    rsft
-  	lctl lmet lalt           spc            ralt rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  y    c    l    m    k    z    f    u    ,    '    [    ]    \
+    	@sym =    +    -    S-8  /    S-5  @paren  S-[    [  \    ;    ret
+    	lsft q    v    w    d    j    b    S-0  S-]    @phpdot   S-\    rsft
+    	lctl lmet lalt           spc            ralt rctl
+    	)
 
   (deflayer numpad
-  	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  	tab  y    @arrow    l    m  k    z @7   @8  @9  ,  -    ]    \
-  	@sym @i    @s   @r   @t   g    p   @4   @5  @6  @0 .    ret
-  	lsft q    v    w    d    j    b   @1   @2  @3  .  rsft
-  	lctl lmet rpt           spc            spc rctl
-  	)
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  y    @arrow    l    m  k    z @7   @8  @9  ,  -    ]    \
+    	@sym @i    @s   @r   @t   g    p   @4   @5  @6  @0 .    ret
+    	lsft q    v    w    d    j    b   @1   @2  @3  .  rsft
+    	lctl lmet rpt           spc            spc rctl
+    	)
 
+  (deflayer qwerty
+    	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+    	tab  q    w    e    r    t    y    u    i   o    p    [    ] \
+    	@isrt a    s    d    f    g    h    j   k   l   ;    ' ret
+    	lsft z    x    c    v    b    n    m    ,    .    / rsft
+    	@msd lmet lalt           spc            ralt rctl
+    	)
 #+end_src
