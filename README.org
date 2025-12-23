@@ -46,7 +46,8 @@ The actual modifiers I use are alt for the index finger, control for the middle 
 
 #+begin_src lisp
 
-  										; (tap-hold  300  150 ; (layer-while-held symbols))
+#+begin_src lisp
+    ; (tap-hold  300  150 ; (layer-while-held symbols))
     sym (tap-hold  300  150 (caps-word-toggle 2000) (layer-while-held symbols))
     c (layer-switch gaming)
     arrow (tap-hold 900 300 c (layer-while-held arrow))
