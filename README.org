@@ -24,10 +24,17 @@ First, set =process-unmapped-keys= to =yes= so that this configuration can work 
 #+end_src
 
 * Homerow Modifiers
+Homerow Modifiers, like the name suggests, moves modifier keys such as Super (also known as the Windows key), Alt, Control, and Shift to the homerow. This works through giving each key on the homerow a different behavior when tapped and when held. Tapping a homerow key will simply press the key normally whereas holding down a key will have it act as a modifier. This is extremely important to my workflow as I use it probably thousands of times a day as an emacs user. A benefit of using the ISRT keyboard I found after switching is that using that layout with homerow modifiers (and a little help from elisp) makes this layout the perfect layout for emacs keybindings.
+
+I will discuss the ISRT keyboard layout later but for now, the important thing to know is that the homerow keys on qwerty are "asdf" and "jkl;", on ISRT they are "isrt" (hence the name of the layout) and "neao". The following is the implementation of the dual behavior of homerow keys described in the previous paragraph:
+
+First we use the =defalias= feature of kanata to define the special keys, we can use any name here for aliases but I just used the single letters that the alias will replace. In order to get the dual behavior of doing one thing when tapped and another when held, we use the =tap-hold= "function" and the timings to determine what is a tap and what is a hold. I settled on the general values of =300= and =150= but had to change them for the =i= alias because I keep accidentally triggering the held behavior when typing.
+
+The actual modifiers I use are alt for the index finger, control for the middle finger, and shift for the ring finger. I diverge from others using homerow modifiers by having my pinky fingers trigger another layer called =extend= using the function =layer-while-held= which I will explain later. The final crucial thing I add is the =fork= function for the =n= alias, which essentially disables the dual behavior and just sets n to output n even if held - but only if =r/left control= is held first. This is because I use control+n extremely often in emacs and want to be able to hold n down without the dual behavior in that very specific scenario.
 #+begin_src lisp
 
   (defalias
-    	i (tap-hold  900  150 i (layer-while-held extend))  
+    i (tap-hold  900  150 i (layer-while-held extend))  
     s (tap-hold  300  150 s lalt)
     r (tap-hold  300  150 r lctl)
     t (tap-hold  300  150 t lsft)
@@ -35,7 +42,11 @@ First, set =process-unmapped-keys= to =yes= so that this configuration can work 
     e (tap-hold  300  150 e rctl)
     a (tap-hold  300  150 a lalt)
     o (tap-hold  300  150 o (layer-while-held extend))
-    										; (tap-hold  300  150 ; (layer-while-held symbols))
+#+end_src
+
+#+begin_src lisp
+
+  										; (tap-hold  300  150 ; (layer-while-held symbols))
     sym (tap-hold  300  150 (caps-word-toggle 2000) (layer-while-held symbols))
     c (layer-switch gaming)
     arrow (tap-hold 900 300 c (layer-while-held arrow))
