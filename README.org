@@ -3,7 +3,7 @@
 #+OPTIONS: toc:2 num:nil
  
 * Summary
-A configuration for kanata that implements the ISRT keyboard layout with homerow modifiers and a custom extend-inspired layout aswell as some other layers and quirks that I use on a daily basis.
+A configuration for kanata that implements the ISRT keyboard layout with homerow modifiers and a custom extend-inspired layer aswell as some other layers and quirks that I use on a daily basis.
 
 * Introduction
 This is a literate configuration for the =kanata= program, which is a program one can use on various operating systems to rebind keys on keyboards - even if said keyboard is not programmable. The reason I call this a literate configuration is because this =org-mode= file contains all of the code for the configuration alongside its documentation and can then be "tangled" by the =emacs= text editor into a file that kanata uses. This workflow in general is called =literate programming=.
