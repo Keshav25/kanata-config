@@ -44,7 +44,8 @@ The actual modifiers I use are alt for the index finger, control for the middle 
     o (tap-hold  300  150 o (layer-while-held extend))
 #+end_src
 
-#+begin_src lisp
+* Other Aliases
+Aside from homerow modifiers, I also use other aliases. First is the =sym= alias which I use for two purpose. When tapped, it capitalizes all letters for the next word typed then reverts back to normal, if no word is typed for 2000 seconds or typing the word takes longer than 2000 seconds then it also reverts back to normal to prevent myself from typing something, leaving, then coming back only to realize it's still in caps mode. When =sym= is held instead of tapped, it enters the =symbols= layer until I let go of the key. Both behaviors are extremely useful, especially when programming. I will discuss the =symbols= layer later on. the =;= alias simply has the same behavior when held as =sym= and just emits a ";" when tapped. The =rpt= alias when tapped will repeat the last key typed, when held, it will enter the =numpad= layer until it is unpressed. The same is true for the =d= alias aside from emitting a "d" when tapped instead. The =arrow= alias is an alias I very rarely use but it simply emits a "c" when tapped and enters the =arrow= layer when held.
 
 #+begin_src lisp
     ; (tap-hold  300  150 ; (layer-while-held symbols))
