@@ -1,10 +1,7 @@
-;; #+TITLE: Kanata Configuration
-;; #+PROPERTY: header-args :tangle config.kbd :comments both
-;; #+OPTIONS: toc:2 num:nil
+;; Initial Setup
+;; First, set =process-unmapped-keys= to =yes= so that this configuration can work on linux. Then set =concurrent-tap-hold= to =yes=. After that, define what the original keyboard layout looks like. So far, every keyboard I use kanata on has been a standard US Qwerty layout.
 
-;; isrt layout with homerow modifiers
-
-;; [[file:README.org::+begin_src lisp][No heading:1]]
+;; [[file:README.org::*Initial Setup][Initial Setup:1]]
 (defcfg process-unmapped-keys yes
   concurrent-tap-hold yes)
 
@@ -15,7 +12,11 @@
   	lsft z    x    c    v    b    n    m    ,    .    /    rsft
   	lctl lmet lalt           spc            ralt rctl
   	)
+;; Initial Setup:1 ends here
 
+;; Homerow Modifiers
+
+;; [[file:README.org::*Homerow Modifiers][Homerow Modifiers:1]]
 (defalias
   	i (tap-hold  900  150 i (layer-while-held extend))  
   s (tap-hold  300  150 s lalt)
@@ -126,4 +127,4 @@
   	lsft z    x    c    v    b    n    m    ,    .    / rsft
   	@msd lmet lalt           spc            ralt rctl
   	)
-;; No heading:1 ends here
+;; Homerow Modifiers:1 ends here

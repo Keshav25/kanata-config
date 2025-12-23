@@ -1,8 +1,15 @@
 #+TITLE: Kanata Configuration
 #+PROPERTY: header-args :tangle config.kbd :comments both
 #+OPTIONS: toc:2 num:nil
+ 
+* Summary
+A configuration for kanata that implements the ISRT keyboard layout with homerow modifiers and a custom extend-inspired layout aswell as some other layers and quirks that I use on a daily basis.
 
-isrt layout with homerow modifiers
+* Introduction
+This is a literate configuration for the =kanata= program, which is a program one can use on various operating systems to rebind keys on keyboards - even if said keyboard is not programmable. The reason I call this a literate configuration is because this =org-mode= file contains all of the code for the configuration alongside its documentation and can then be "tangled" by the =emacs= text editor into a file that kanata uses. This workflow in general is called =literate programming=.
+
+* Initial Setup
+First, set =process-unmapped-keys= to =yes= so that this configuration can work on linux. Then set =concurrent-tap-hold= to =yes=. After that, define what the original keyboard layout looks like. So far, every keyboard I use kanata on has been a standard US Qwerty layout.
 #+begin_src lisp
   (defcfg process-unmapped-keys yes
     concurrent-tap-hold yes)
@@ -14,6 +21,10 @@ isrt layout with homerow modifiers
     	lsft z    x    c    v    b    n    m    ,    .    /    rsft
     	lctl lmet lalt           spc            ralt rctl
     	)
+#+end_src
+
+* Homerow Modifiers
+#+begin_src lisp
 
   (defalias
     	i (tap-hold  900  150 i (layer-while-held extend))  
