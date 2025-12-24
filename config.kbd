@@ -115,7 +115,7 @@
   	tab \ q    w    e    r    t    y    @u    i   o    p    [    ] 
   	@isrt ret a    s    d    f    g    @h    @j   @k   l   ;    ' 
   	lsft rsft z    x    c    v    b    n    m    ,    .    /
-  	@msd lmet lalt           spc            @ralt @rctl
+  	lctl lmet lalt           spc            mlft mrgt
   	)
 
 (deflayer symbols
