@@ -100,10 +100,10 @@ Aside from homerow modifiers, I also use other aliases. First is the =sym= alias
     	)
 
   (defalias
-      j (tap-hold 200 200 j (movemouse-down 1 1))
-    u (tap-hold 200 200 u (movemouse-up 1 1))
-    k (tap-hold 200 200 k (movemouse-right 1 1))
-    h (tap-hold 200 200 h (movemouse-left 1 1))
+      j (tap-hold 200 200 j (movemouse-down 50 120))
+    u (tap-hold 200 200 u (movemouse-up 50 120))
+    k (tap-hold 200 200 k (movemouse-right 50 120))
+    h (tap-hold 200 200 h (movemouse-left 50 120))
     ralt (tap-hold 200 200 mlft ralt)
     rctl (tap-hold 200 200 mrgt rctl)
     phpdot (macro - S-.)
