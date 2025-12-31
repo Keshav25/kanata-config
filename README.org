@@ -105,10 +105,12 @@ Aside from homerow modifiers, I also use other aliases. First is the =sym= alias
     k (tap-hold 200 200 k (movemouse-right 50 120))
     h (tap-hold 200 200 h (movemouse-left 50 120))
     ralt (tap-hold 200 200 mlft ralt)
-    rctl (tap-hold 200 200 mrgt rctl)
+  rctl (tap-hold 200 200 mrgt rctl)
+  . (tap-hold 200 200 . +)
+  , (tap-hold 200 200 , /)
     phpdot (macro - S-.)
     isrt (layer-switch isrt)
-    paren (fork S-9 S-0 (lsft)))
+  paren (fork S-9 S-0 (lsft)))
 
   (deflayer arrow
     	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -122,7 +124,7 @@ Aside from homerow modifiers, I also use other aliases. First is the =sym= alias
     	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
     	tab \ q    w    e    r    t    y    @u    i   o    p    [    ] 
     	@isrt ret a    s    d    f    g    @h    @j   @k   l   ;    ' 
-    	lsft rsft z    x    c    v    b    n    m    ,    .    /
+    	lsft rsft z    x    c    v    b    mlft    mrgt    mmid    .    /
     	lctl lmet lalt           spc            mlft mrgt
     	)
 
@@ -136,9 +138,9 @@ Aside from homerow modifiers, I also use other aliases. First is the =sym= alias
 
   (deflayer numpad
     	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-    	tab  y    @arrow    l    m  k    z @7   @8  @9  ,  -    ]    \
-    	@sym @i    @s   @r   @t   g    p   @4   @5  @6  @0 .    ret
-    	lsft q    v    w    d    j    b   @1   @2  @3  .  rsft
+    	tab  y    @arrow    l    m  k    z @7   @8  @9  @,  -    ]    \
+    	@sym @i    @s   @r   @t   g    p   @4   @5  @6  @0 =    ret
+    	lsft q    v    w    d    j    b   @1   @2  @3  @.  rsft
     	lctl lmet rpt           spc            spc rctl
     	)
 
