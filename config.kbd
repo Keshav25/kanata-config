@@ -1,7 +1,10 @@
 ;; Initial Setup
+;; :PROPERTIES:
+;; :ID:       04e1846d-79fd-470e-8715-ae2b59e75d53
+;; :END:
 ;; First, set =process-unmapped-keys= to =yes= so that this configuration can work on linux. Then set =concurrent-tap-hold= to =yes=. After that, define what the original keyboard layout looks like. So far, every keyboard I use kanata on has been a standard US Qwerty layout.
 
-;; [[file:README.org::*Initial Setup][Initial Setup:1]]
+;; [[id:04e1846d-79fd-470e-8715-ae2b59e75d53][Initial Setup:1]]
 (defcfg process-unmapped-keys yes
   concurrent-tap-hold yes)
 
@@ -15,6 +18,9 @@
 ;; Initial Setup:1 ends here
 
 ;; Homerow Modifiers
+;; :PROPERTIES:
+;; :ID:       4f8eb66e-823b-46de-8756-aab902d4608f
+;; :END:
 ;; Homerow Modifiers, like the name suggests, moves modifier keys such as Super (also known as the Windows key), Alt, Control, and Shift to the homerow. This works through giving each key on the homerow a different behavior when tapped and when held. Tapping a homerow key will simply press the key normally whereas holding down a key will have it act as a modifier. This is extremely important to my workflow as I use it probably thousands of times a day as an emacs user. A benefit of using the ISRT keyboard I found after switching is that using that layout with homerow modifiers (and a little help from elisp) makes this layout the perfect layout for emacs keybindings.
 
 ;; I will discuss the ISRT keyboard layout later but for now, the important thing to know is that the homerow keys on qwerty are "asdf" and "jkl;", on ISRT they are "isrt" (hence the name of the layout) and "neao". The following is the implementation of the dual behavior of homerow keys described in the previous paragraph:
@@ -23,7 +29,7 @@
 
 ;; The actual modifiers I use are alt for the index finger, control for the middle finger, and shift for the ring finger. I diverge from others using homerow modifiers by having my pinky fingers trigger another layer called =extend= using the function =layer-while-held= which I will explain later. The final crucial thing I add is the =fork= function for the =n= alias, which essentially disables the dual behavior and just sets n to output n even if held - but only if =r/left control= is held first. This is because I use control+n extremely often in emacs and want to be able to hold n down without the dual behavior in that very specific scenario.
 
-;; [[file:README.org::*Homerow Modifiers][Homerow Modifiers:1]]
+;; [[id:4f8eb66e-823b-46de-8756-aab902d4608f][Homerow Modifiers:1]]
 (defalias
   i (tap-hold  900  150 i (layer-while-held extend))  
   s (tap-hold  300  150 s lalt)
@@ -36,10 +42,13 @@
 ;; Homerow Modifiers:1 ends here
 
 ;; Other Aliases
+;; :PROPERTIES:
+;; :ID:       2fe9902b-9dca-424f-8cc0-9e291d065edc
+;; :END:
 ;; Aside from homerow modifiers, I also use other aliases. First is the =sym= alias which I use for two purpose. When tapped, it capitalizes all letters for the next word typed then reverts back to normal, if no word is typed for 2000 seconds or typing the word takes longer than 2000 seconds then it also reverts back to normal to prevent myself from typing something, leaving, then coming back only to realize it's still in caps mode. When =sym= is held instead of tapped, it enters the =symbols= layer until I let go of the key. Both behaviors are extremely useful, especially when programming. I will discuss the =symbols= layer later on. the =;= alias simply has the same behavior when held as =sym= and just emits a ";" when tapped. The =rpt= alias when tapped will repeat the last key typed, when held, it will enter the =numpad= layer until it is unpressed. The same is true for the =d= alias aside from emitting a "d" when tapped instead. The =arrow= alias is an alias I very rarely use but it simply emits a "c" when tapped and enters the =arrow= layer when held.
 
 
-;; [[file:README.org::*Other Aliases][Other Aliases:1]]
+;; [[id:2fe9902b-9dca-424f-8cc0-9e291d065edc][Other Aliases:1]]
 ; (tap-hold  300  150 ; (layer-while-held symbols))
   sym (tap-hold  300  150 (caps-word-toggle 2000) (layer-while-held symbols))
   c (layer-switch gaming)
@@ -100,7 +109,7 @@
 rctl (tap-hold 200 200 mrgt rctl)
 . (tap-hold 200 200 . +)
 , (tap-hold 200 200 , /)
-  phpdot (macro - S-.)
+  phpdot (tap-hold 200 150 ] (macro - S-.))
   isrt (layer-switch isrt)
 paren (fork S-9 S-0 (lsft)))
 
